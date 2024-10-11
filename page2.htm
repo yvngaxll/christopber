@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skateboard Shop</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #FF7E5F, #FEB47B); /* Bright gradient background */
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 36px;
+            color: #fff;
+            text-shadow: 2px 2px #333; /* Subtle shadow for depth */
+        }
+
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.1);
+        }
+
+        .product-name {
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 18px;
+            color: #FF6347; /* Tomato color for price */
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .buy-button {
+            background-color: #FFA07A; /* Light salmon button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #FF4500; /* Darker shade on hover */
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .products-container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Skateboard Shop</h1>
+
+    <div class="products-container">
+        <div class="product-card">
+            <img src="santa cruz.jpeg" alt="Skateboard 1" class="product-image">
+            <div class="product-name">Santa Cruz deck</div>
+            <div class="product-price">$249.99</div>
+            <a href="page3.htm">Buy Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="baker.jpeg" alt="Skateboard 2" class="product-image">
+            <div class="product-name">Baker deck</div>
+            <div class="product-price">$149.99</div>
+            <a href="page3.htm">Buy Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="supreme.jpeg" alt="" class="product-image">
+            <div class="product-name">Supreme deck</div>
+            <div class="product-price">$249.99</div>
+            <a href="page3.htm">Buy Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="redz.jpeg" alt="redz" class="product-image">
+            <div class="product-name">Redz</div>
+            <div class="product-price">$80.00</div>
+            <a href="page3.htm">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="trasher.jpeg" alt="Skateboard 5" class="product-image">
+            <div class="product-name">Trasher grip</div>
+            <div class="product-price">$20.00</div>
+            <a href="page3.htm">Buy Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="independent.jpeg" alt="Skateboard 6" class="product-image">
+            <div class="product-name">Independent trucks</div>
+            <div class="product-price">$260.00</div>
+            <a href="page3.htm">Buy Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="pivot.jpeg" alt="Skateboard 7" class="product-image">
+            <div class="product-name">Pivot cup</div>
+            <div class="product-price">$5.00</div>
+            <a href="page3.htm">Buy Now</a>
+        </div>

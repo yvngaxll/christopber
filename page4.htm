@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1F4037, #99F2C8); /* Green gradient background */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .confirmation-container {
+            background: rgba(255, 255, 255, 0.9); /* Light background with transparency */
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .confirmation-container h1 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-container p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .order-details {
+            background-color: #1F4037;
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .order-details div {
+            margin: 10px 0;
+        }
+
+        .thank-you-message {
+            font-size: 24px;
+            color: #1F4037;
+            margin-bottom: 30px;
+        }
+
+        .home-button, .shop-button {
+            background-color: #FF6F61; /* Coral red for buttons */
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .home-button:hover, .shop-button:hover {
+            background-color: #FF4E3F; /* Darker coral red on hover */
+        }
+
+        .skateboard-image {
+            width: 100px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="confirmation-container">
+        <h1>Order Confirmed!</h1>
+        <p>Thank you for your purchase. Your skateboard is on its way!</p>
+
+        <div class="order-details">
+            <div><strong>Order Number:</strong> #SKT2024001</div>
+            <div><strong>Product:</strong> Supreme deck</div>
+            <div><strong>Price:</strong> $249.99</div>
+            <div><strong>Estimated Delivery:</strong> 3-5 Business Days</div>
+        </div>
+
+        <div class="thank-you-message">We hope you enjoy your new ride!</div>
+
+        <button class="home-button" onclick="redirectToHome()">Return to Home</button>
+        <button class="shop-button" onclick="continueShopping()">Continue Shopping</button>
+
+        <img src="bg.jpeg" alt="Skateboard" class="skateboard-image">
+    </div>
+
+    <script>
+        function redirectToHome() {
+            window.location.href = "index.htm";
+        }
+
+        function continueShopping() {
+            window.location.href = "page5.htm";
+        }
+    </script>
+
+</body>
+</html>

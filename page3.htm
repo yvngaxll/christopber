@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Skateboard | Skateboard Shop</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: black; color: white; text-align: center; }
+        .customization-container { max-width: 800px; margin: 50px auto; padding: 20px; background-color: #333; border-radius: 10px; }
+        select, input { width: 80%; padding: 10px; margin: 10px 0; border: none; border-radius: 5px; }
+        button { background-color: #4CAF50; color: white; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+
+    <h1>Customize Your Skateboard</h1>
+    
+    <div class="customization-container">
+        <label for="deck-size">Select Deck Size:</label><br>
+        <select id="deck-size">
+            <option value="7.25">7.25 inches</option>
+            <option value="8.25">8.25 inches</option>
+            <option value="8.5">8.5 inches</option>
+        </select><br>
+
+        <label for="wheel-color">Choose Wheel Color:</label><br>
+        <select id="wheel-color">
+            <option value="black">Santa Cruz</option>
+            <option value="red">Baker</option>
+            <option value="blue">Supreme</option>
+        </select><br>
+
+        <label for="custom-text">Add Custom Text:</label><br>
+        <input type="text" id="custom-text" placeholder="Enter text (optional)"><br>
+        
+        <a href="page4.htm">Save and Proceed</a>
+    </div>
+
+    <script>
+        function saveCustomization() {
+            const deckSize = document.getElementById('deck-size').value;
+            const wheelColor = document.getElementById('wheel-color').value;
+            const customText = document.getElementById('custom-text').value;
+
+            localStorage.setItem('deckSize', deckSize);
+            localStorage.setItem('wheelColor', wheelColor);
+            localStorage.setItem('customText', customText || 'None');
+
+            window.location.href = "confirmation.html"; // Redirect to confirmation page
+        }
+    </script>
+
+</body>
+</html>

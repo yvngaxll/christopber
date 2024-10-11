@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1f1c2c, #928dab); /* Gradient background */
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f3f3f3;
+        }
+        .login-container {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1); /* Transparent white */
+            backdrop-filter: blur(10px); /* Glass effect */
+            border-radius: 20px;
+            width: 350px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .login-container:hover {
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.7); /* Stronger shadow on hover */
+        }
+        .logo {
+            margin-bottom: 25px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            border-radius: 10px;
+            border: none;
+            background: rgba(255, 255, 255, 0.2); /* Soft transparent background */
+            color: #fff;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        input[type="text"]:focus, input[type="password"]:focus {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        input[type="submit"], .skip-button {
+            background-color: #5C67F2; /* Vivid blue for the buttons */
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #4c57d1; /* Darker blue on hover */
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+        .skip-button {
+            background-color: #F25C5C; /* Soft red for the skip button */
+        }
+        .skip-button:hover {
+            background-color: #d14c4c;
+            transform: scale(1.05);
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #dcdcdc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <img src="bg.jpeg" alt="Skate Account" class="logo" width="100px">
+        <form onsubmit="return handleLogin(event)">
+            <input type="text" id="userId" name="userId" placeholder="User ID" required><br>
+            <input type="password" id="password" name="password" placeholder="Password" required><br>
+            <input type="submit" value="Login">
+        </form>
+        <button class="skip-button" onclick="skipToHomepage()">Skip to Homepage</button>
+        <div class="message">Forgot your password? <a href="#" style="color: #F25C5C;">Reset it</a></div>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const userId = document.getElementById('userId').value;
+            const password = document.getElementById('password').value;
+
+            if (userId === "christopher" && password === "yvngtop27") {
+                window.location.href = "page2.htm"; 
+            } else {
+                alert("Invalid User ID or Password!");
+            }
+        }
+
+        function skipToHomepage() {
+            window.location.href = "page2.htm"; 
+        }
+    </script>
+
+</body>
+</html>
